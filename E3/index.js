@@ -53,10 +53,9 @@ const capturar = document.getElementById("inputnumber");
 const button = document.querySelector(".button");
 
 const labels = document.querySelector(".labels");
+
 const h2 = document.createElement("h2");
-
 const h4 = document.createElement("h4");
-
 const error = document.createElement("h2");
 
 labels.appendChild(h2);
@@ -66,13 +65,15 @@ labels.appendChild(error);
 button.addEventListener("click", () => {
   const capturarResult = capturar.value;
   const datosPizzaTrue = pizza.find((e) => e.id == capturarResult);
-  const datosPizzaFalse = pizza.find((e) => e.id !== capturarResult);
 
   if (datosPizzaTrue) {
     h2.innerHTML = datosPizzaTrue.nombre;
+    h4.innerHTML = datosPizzaTrue.precio;
   }
 
   if (!datosPizzaTrue) {
-    error.innerHTML = "No existe ese ID";
+    h2.innerHTML = "";
+    h4.innerHTML = "";
+    error.innerHTML = "No existe ese Id";
   }
 });
