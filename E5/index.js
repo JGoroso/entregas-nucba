@@ -72,6 +72,8 @@ searchCardContainer.addEventListener("input", (e) => {
   });
 });
 
+
+
 pizzas = pizza.map((e) => {
   const card = pizzaCardTemplate.content.cloneNode(true).children[0];
 

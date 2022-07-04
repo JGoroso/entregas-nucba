@@ -1,0 +1,177 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0e0d0d;
+}
+
+.contacto-frm {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container-contacto form {
+  background-color: #fafafa;
+  width: 30vw;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 0px;
+
+}
+
+.img{
+  width: 20%;
+}
+
+.container-contacto form h1 {
+font-family: sans-serif;
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #4338CA;
+}
+
+.container-contacto form span {
+  font-size: 0.9em;
+  color: #232323;
+}
+
+.container-contacto .grupo {
+  position: relative;
+  margin: 45px;
+}
+
+input,
+textarea {
+  background: none;
+
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #c8c6c0;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  color: #232323;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+  position: absolute;
+  top: -14px;
+  font-size: 12px;
+  color: #5f94ff;
+}
+
+form label {
+  color: #c8c6c0;
+  font-size: 16px;
+  position: absolute;
+  top: -2px;
+  left: 5px;
+ 
+  transition: 0.3s ease all;
+  pointer-events: none;
+}
+
+.barras {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+input:focus ~ .barras::before,
+textarea:focus ~ .barras::before {
+  width: 100%;
+}
+
+.barras::before {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to right, #8ec5fc, #ff4b64);
+  transition: 0.3s ease all;
+  left: 0%;
+}
+
+form a {
+  color: #5f94ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+form button {
+  border: 1px solid #c8c6c0;
+  display: block;
+  width: 100px;
+
+  color: #232323;
+  text-decoration: none;
+  background-color: #ff4b64;
+
+  padding: 10px 0;
+  border-radius: 10px;
+  font-size: 0.8em;
+  margin: 10px auto;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.volver {
+  font-size: 12px;
+  color: #232323;
+}
+
+@media screen and (max-width: 767px) {
+  .container-contacto form {
+    width: 90vw;
+  }
+
+  .sadness img {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .container-contacto form {
+    width: 50vw;
+  }
+
+  .sadness img {
+    width: 100vw;
+  }
+}
+
+.mainClass{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mainClass__info{
+  width: 50%;
+}
