@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -12,9 +12,17 @@ body {
 
 }
 
+@media (max-width: 1024px) {
+  .navb{
+    width: 100%;
+    display: flex;}
+}
+
+
 .contacto-frm {
   display: flex;
-  height: 100vh;
+  margin-top: 20px;
+  height: calc(100vh - 30%);
   width: 100%;
   display: flex;
   align-items: center;
@@ -37,6 +45,8 @@ body {
   width: 20%;
 }
 
+
+
 .container-contacto form h1 {
 font-family: sans-serif;
   font-size: 1.5em;
@@ -54,6 +64,8 @@ font-family: sans-serif;
   margin: 45px;
 
 }
+
+
 
 input,
 textarea {
@@ -127,10 +139,10 @@ form button {
   display: block;
   width: 100px;
 
-  color: #232323;
+  color: #fafafa;
   text-decoration: none;
-  background-color: #ff4b64;
-
+  background-color: rgba(67,56,202,1);
+font-weight: 600;
   padding: 10px 0;
   border-radius: 10px;
   font-size: 0.8em;
@@ -139,10 +151,7 @@ form button {
   cursor: pointer;
 }
 
-.volver {
-  font-size: 12px;
-  color: #232323;
-}
+
 
 @media screen and (max-width: 767px) {
   .container-contacto form {
@@ -161,7 +170,6 @@ form button {
 
 .mainClass{
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -171,10 +179,19 @@ form button {
 
 .mainClass__info{
   width: 50%;
+  
 }
 
-#movieName, #movieCategorie, #movieYear, #movieDirector, #movieImage  {
+#movieName, #movieCategorie, #movieYear, #movieDirector, #moviePortada, #movieImage  {
   color: #f1eaea;
+}
+
+.form span{
+  
+  color: white;
+  font-size:  12px;
+  font-weight: 400;
+  font-family: "Montserrat";
 }
 
 #movieSinopsis{
@@ -189,4 +206,162 @@ form button {
 
 #img{
   width: 15%;
+}
+
+@media (max-width: 640px) {
+  #img{
+    width: 40%;
+  }
+}
+
+
+@media (max-width: 1134px) {
+  .mainClass__info{
+    text-align: center;
+    font-size: 1.2em;
+    width: 100%;
+  }
+}
+
+
+/* CARD */
+
+
+
+.searchBar{
+  margin: 2% auto;
+  width: 50%;
+}
+
+@media (max-width: 640px){
+ .searchBar{
+  width: 70%;
+ }
+}
+@media (min-width: 1241px) {
+  .searchBar{
+   width: 25%;
+  }
+ }
+
+.row{
+  padding: 0 10%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  }
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"]{
+  float:left;
+}
+
+@media only screen and (max-width: 559px){
+
+    [class*="col-"] {
+     width: 100%;
+     
+    }
+
+}
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+	.col-m-1 {width: 8.33%;}
+	.col-m-2 {width: 16.66%;}
+	.col-m-3 {width: 25%;}
+	.col-m-4 {width: 33.33%;}
+	.col-m-5 {width: 41.66%;}
+	.col-m-6 {width: 50%;}
+	.col-m-7 {width: 58.33%;}
+	.col-m-8 {width: 66.66%;}
+	.col-m-9 {width: 75%;}
+	.col-m-10 {width: 83.33%;}
+	.col-m-11 {width: 91.66%;}
+	.col-m-12 {width: 100%;}
+}
+
+
+@media only screen and (min-width: 1980px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 17%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+
+.card-movie{
+  cursor:pointer;
+  position:relative;
+  display:block;
+
+  height:400px;
+  margin:15px;
+  overflow:hidden;
+  border-radius:12px;
+  background-position:center;
+  background-size:cover;
+    
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .card-movie{
+    height:300px;
+  }
+}
+
+.card-movie .description-container{
+  position:absolute;
+  background:linear-gradient(0deg, rgba(0,0,0,1) 60%, rgba(255,255,255,0) 100%);;
+
+  bottom:-300px;
+  left:0;
+  right:0;
+  padding:10px;
+  padding-top:60px;
+  transition: bottom 0.5s;
+}
+
+.description-container span {
+  color: #fafafa;
+  font-family:  'Montserrat', sans-serif;
+}
+
+.description-container p{
+  color: #969292;
+}
+.card-movie:hover .description-container{
+    bottom:0;
+}
+
+.filtro{
+  display: none;
+}
+
+.modal_container{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }

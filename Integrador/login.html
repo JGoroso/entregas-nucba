@@ -14,12 +14,12 @@
 <body>
 
 
-
+  <div class="modal_container"></div>
   <!--Comienza Navbar-->
   <div class="relative">
 
 
-    <div class="flex justify-around items-center border-b-2 border-gray-100 py-2">
+    <div class="navb flex justify-around items-center border-b-2 border-gray-100 py-2">
       <div class="flex justify-start">
         <a href="index.html">
           <img id="img" src="assets/imgs/4891157.png" alt="">
@@ -27,62 +27,61 @@
       </div>
 
 
-      <nav>
-        <div class="relative">
-          <div class="transform  max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+      <div class="relative ">
+        <div class="transform  max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+          <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+          </div>
+
+        </div>
+
+        <div class=" items-center justify-end navb">
+          <span id="userLoggin" class="whitespace-nowrap text-base font-medium text-lime-100  px-4 hover:text-blue-300">
+          </span>
+          <a href="index.html" class="whitespace-nowrap text-base font-medium text-white px-2 hover:text-blue-300">
+            Home </a>
+          <a href="login.html"
+            class="ml-8 whitespace-nowrap items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+            Ingresar </a>
+        </div>
+      </div>
+    </div>
+    <!--Termina Navbar-->
+
+    <!--TERMINA EL NAVBAR-->
+    <div class="contacto-frm">
+
+      <div class="container-contacto">
+        <form action="" class="form">
+          <div class="img">
+            <img src="assets/imgs/4891157.png" alt="">
+          </div>
+
+          <h1>HOLA 😀 VOLVISTE!</h1>
+          <div class="form">
+            <div class="grupo">
+              <input type="text" name="" id="user" required>
+              <span class="barras"></span>
+              <label><i class="fa-solid fa-circle-user"></i> Usuario</label>
             </div>
+            <div class="grupo">
+              <input type="text" name="" id="password" required>
+              <span class="barras"></span>
+              <label><i class="fa-solid fa-user-lock"></i> Contraseña</label>
+            </div>
+            <span>¿Aun no tienes cuenta? <a href="register.html">REGISTRATE!</a></span>
+            <button id="bttn">Ingresar</button>
+            <span id="result"></span>
 
           </div>
 
-          <div class=" items-center justify-end md:flex-1 ">
-            <a href="index.html" class="whitespace-nowrap text-base font-medium text-white px-2 hover:text-blue-300">
-              Home </a>
-            <a href="login.html"
-              class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-              Ingresar </a>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </div>
-  <!--Termina Navbar-->
+        </form>
 
-  <!--TERMINA EL NAVBAR-->
-  <div class="contacto-frm">
-
-    <div class="container-contacto">
-      <form action="">
-        <div class="img">
-          <img src="assets/imgs/4891157.png" alt="">
-        </div>
-
-        <h1>HOLA 😀 VOLVISTE!</h1>
-        <div class="form">
-          <div class="grupo">
-            <input type="text" name="" id="user" required>
-            <span class="barras"></span>
-            <label><i class="fa-solid fa-circle-user"></i> Usuario</label>
-          </div>
-          <div class="grupo">
-            <input type="text" name="" id="password" required>
-            <span class="barras"></span>
-            <label><i class="fa-solid fa-user-lock"></i> Contraseña</label>
-          </div>
-          <span>¿Aun no tienes cuenta? <a href="register.html">REGISTRATE!</a></span>
-          <button id="bttn">Ingresar</button>
-          <span id="result"></span>
-          <span><a href="index.html" class="volver"><i class="fa-solid fa-angles-left"></i> Volver al inicio</a></span>
-        </div>
-
-      </form>
+      </div>
 
     </div>
 
-  </div>
 
-
-  <script type="module" src="login.js"></script>
+    <script type="module" src="login.js"></script>
 </body>
 
 </html>
