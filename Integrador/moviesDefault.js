@@ -28,7 +28,6 @@ let movieListDefault = [];
 localStorage.setItem("MoviesDefault", JSON.stringify(moviesDefault));
 movieListDefault = localStorage.getItem("MoviesDefault");
 movieListDefault = JSON.parse(movieListDefault);
-console.log(movieListDefault);
 
 const renderCardDefault = () => {
   const container = document.querySelector(".row");

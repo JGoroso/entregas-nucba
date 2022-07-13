@@ -117,5 +117,7 @@ const renderCard = () => {
 };
 
 renderCard();
-console.log(moviesList);
+
+
+
 export { SHOW_USER };
