@@ -5,28 +5,32 @@ const YEAR = document.getElementById("movieYear");
 const DIRECTOR = document.getElementById("movieDirector");
 const CATEGORIE = document.getElementById("movieCategorie");
 const URL = document.getElementById("moviePortada");
-const USERLOGGIN = document.querySelector("#userLoggin");
+const BUTTONLOGOUT = document.querySelector("#btnLogout");
 const BUTTON = document.querySelector("#bttn");
-const movieCardTemplate = document.querySelector("[data-movie-template]");
-const movieContainer = document.querySelector("[movie-container]");
 
 let moviesList = [];
 moviesList = localStorage.getItem("Movies");
 moviesList = JSON.parse(moviesList);
 
-// movieContainer.setAttribute(
-//   "style",
-//   "background-image: url('https://m.media-amazon.com/images/I/71UNQX+50AL._AC_SX679_.jpg'"
-// );
-
 const SHOW_USER = () => {
   const data = JSON.parse(localStorage.getItem("Users Loggin"));
-  data !== null ? (USERLOGGIN.innerHTML = "User: " + data.user) : "";
+  data !== null
+    ? (BUTTONLOGOUT.innerHTML =
+        "Salir " +
+        ` <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+  </svg></button>`) &&
+      BUTTONLOGOUT.addEventListener("click", (e) => {
+        e.preventDefault();
+        localStorage.removeItem("Users Loggin");
+        location.reload();
+      })
+    : "";
 };
 
 const LOADDATA = BUTTON.addEventListener("click", (e) => {
   e.preventDefault();
-  const container = document.querySelector(".row");
+
   const data = JSON.parse(localStorage.getItem("Users Loggin"));
   if (data == null) {
     //Por favor registrate
@@ -54,10 +58,11 @@ const LOADDATA = BUTTON.addEventListener("click", (e) => {
         URL.value ||
         "https://ih1.redbubble.net/image.1995557870.8597/st,small,507x507-pad,600x600,f8f8f8.jpg",
     });
-
     localStorage.setItem("Movies", JSON.stringify(moviesList));
+
     moviesList = localStorage.getItem("Movies");
     moviesList = JSON.parse(moviesList);
+    console.log(moviesList);
 
     TITLE.value = "";
     YEAR.value = "";
@@ -66,7 +71,6 @@ const LOADDATA = BUTTON.addEventListener("click", (e) => {
     URL.value = "";
 
     renderCard();
-    // VER SI HAGO UN POPUP PELICULAR CARGADA
   } else {
     modalForm();
     TITLE.value = "";
@@ -74,8 +78,6 @@ const LOADDATA = BUTTON.addEventListener("click", (e) => {
     DIRECTOR.value = "";
     CATEGORIE.value = "";
     URL.value = "";
-
-    //POPUP PELICULAR CARGADA llena los formularios requeridos
   }
 });
 
@@ -106,6 +108,7 @@ const renderCard = () => {
             <p>
               <span>Categorie: </span>${e.categorie}
             </p>
+            <span id="remove">Eliminar 😢</button>
           </div>
         </div>
       </div>
@@ -114,4 +117,5 @@ const renderCard = () => {
 };
 
 renderCard();
+console.log(moviesList);
 export { SHOW_USER };

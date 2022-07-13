@@ -12,6 +12,10 @@ body {
 
 }
 
+.navb{
+  display: fleX;
+}
+
 @media (max-width: 1024px) {
   .navb{
     width: 100%;
@@ -180,6 +184,10 @@ font-weight: 600;
 .mainClass__info{
   width: 50%;
   
+}
+#remove{
+  color: red;
+  z-index: 1;
 }
 
 #movieName, #movieCategorie, #movieYear, #movieDirector, #moviePortada, #movieImage  {
