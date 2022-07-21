@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap");
+
+.container {
+  margin: 0 auto;
+  width: 50%;
+  height: 500px;
+  padding: 10px;
+  background-color: #f5f5f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-btn {
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: #e05252;
+  color: #fafafa;
+}
+
+.inputForm {
+  height: 20px;
+}
+
+.taskContainer {
+  width: 70%;
+}
+
+h2 {
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}

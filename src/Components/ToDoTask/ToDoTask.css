@@ -1,0 +1,24 @@
+.task {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task p {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+.task button {
+  border: 0;
+  background-color: transparent;
+}
+
+.taskUpdate {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  padding: 10px;
+}
